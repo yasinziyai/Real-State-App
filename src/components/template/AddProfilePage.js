@@ -8,7 +8,6 @@ import styles from "@/template/AddProfilePage.module.css";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { ThreeDots } from "react-loader-spinner";
 function AddProfilePage({ data }) {
   const [loading, setLoading] = useState(false);
   const [profileData, setProfileData] = useState({
@@ -25,7 +24,7 @@ function AddProfilePage({ data }) {
   });
   useEffect(() => {
     if (data) setProfileData(data);
-  }, []);
+  }, [data]);
   const submitHandler = async () => {
     // console.log(profileData);
     setLoading(true);
