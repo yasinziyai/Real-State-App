@@ -1,3 +1,4 @@
+"use server";
 import BuyResidentialPage from "@/template/BuyResidentialPage";
 
 async function BuyResidential({ searchParams }) {
@@ -5,7 +6,7 @@ async function BuyResidential({ searchParams }) {
     cache: "no-store",
   });
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   if (data.error) return <h3>مشکلی پیش آمده است</h3>;
   let finalData = data.data;
   if (searchParams.category) {

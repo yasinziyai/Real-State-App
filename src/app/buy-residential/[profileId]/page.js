@@ -1,3 +1,4 @@
+"use server";
 import Profile from "@/models/Profile";
 import DetailesPage from "@/template/DetailesPage";
 import connectDB from "@/utils/connectDB";
