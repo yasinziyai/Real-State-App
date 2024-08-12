@@ -2,7 +2,7 @@
 import BuyResidentialPage from "@/template/BuyResidentialPage";
 
 async function BuyResidential({ searchParams }) {
-  const res = await fetch(`${process.env.VERCEL_URL}/api/profile`, {
+  const res = await fetch(`https://real-state-app-bay.vercel.app/api/profile`, {
     cache: "no-store",
   });
   const data = await res.json();
